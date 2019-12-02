@@ -1,0 +1,32 @@
+{
+  "name": "adventofcode-2019",
+  "version": "1.0.0",
+  "description": "My solutions for adventofcode.com/2019 written in Javascript",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "tape **/*.test.js && npm run lint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@mapbox/eslint-config-mapbox"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npeternel/adventofcode-2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npeternel/adventofcode-2019/issues"
+  },
+  "homepage": "https://github.com/npeternel/adventofcode-2019#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "@mapbox/eslint-config-mapbox": "^2.0.1",
+    "eslint-plugin-node": "^10.0.0",
+    "tape": "^4.11.0"
+  }
+}
