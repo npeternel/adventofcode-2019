@@ -19,4 +19,3 @@ if (require.main === module) {
 }
 
 module.exports = day1;
-
