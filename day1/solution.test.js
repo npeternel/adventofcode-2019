@@ -1,10 +1,12 @@
 'use strict';
 
 const test = require('tape');
-const day1 = require('./solution');
+const fs = require('fs');
+const { solution } = require('./solution');
 
 test('day1', (assert) => {
-  const sum = day1(__dirname + '/testinput');
+  const input = fs.readFileSync(__dirname + '/testinput', 'utf8');
+  const sum = solution(input);
   assert.equals(sum, 34241, 'correct total fuel');
   assert.end();
 });

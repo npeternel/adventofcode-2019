@@ -1,7 +1,5 @@
 'use strict';
 
-const fs = require('fs');
-
 function day2part1(stringInts) {
   const integers = stringInts.split(',').map((int) => parseInt(int, 10));
   let run = true;
@@ -61,12 +59,12 @@ function day2part2(stringInts) {
   return [m, n];
 }
 
-if (require.main === module) {
-  const data = fs.readFileSync(__dirname + '/input', 'utf8');
-  let answer = day2part1(data);
+function solution(input) {
+  let answer = day2part1(input);
   console.log(`Answer is for part 1 is ${answer}`);
-  answer = day2part2(data);
+  answer = day2part2(input);
   console.log(`Answer is for part 2 is ${answer[0]} and ${answer[1]}`);
 }
 
-module.exports = day2part1;
+module.exports.solution = solution;
+module.exports.day2part1 = day2part1;
