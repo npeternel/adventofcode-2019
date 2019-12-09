@@ -4,7 +4,8 @@ const fs = require('fs');
 
 const solutions = {
   day1: require('./day1/solution'),
-  day2: require('./day2/solution')
+  day2: require('./day2/solution'),
+  day3: require('./day3/solution')
 }
 
 if (require.main === module) {
