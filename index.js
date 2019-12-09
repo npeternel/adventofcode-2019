@@ -6,7 +6,8 @@ const exec = require('child_process').exec;
 const solutions = {
   day1: require('./day1/solution'),
   day2: require('./day2/solution'),
-  day3: require('./day3/solution')
+  day3: require('./day3/solution'),
+  day4: require('./day4/solution')
 }
 
 if (require.main === module) {
