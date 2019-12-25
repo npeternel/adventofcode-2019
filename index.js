@@ -25,7 +25,17 @@ if (require.main === module) {
       fs.writeFileSync(__dirname + '/' + day + '/solution.js', `'use strict';
 
 function solution(input) {
-  console.log(\`Answer is \${answer}\`);
+  const part1Answer = function day${day}part1(input);
+  const part2Answer = function day${day}part2(input);
+  console.log(\`Answer is \${part1Answer}\ and \${part2Answer}\`);
+}
+
+function day${day}part1(input) {
+  return;
+}
+
+function day${day}part2(input) {
+  return;
 }
       
 module.exports.solution = solution;
@@ -34,6 +44,18 @@ module.exports.solution = solution;
 
 const test = require('tape');
 const { solution } = require('./solution');
+
+test('day ${day} part 1', (assert) => {
+  // const actual = solution('');
+  // assert.equals(actual[0], '', 'correct answer');
+  assert.end();
+});
+
+test('day ${day} part 2', (assert) => {
+  // let actual = solution('');
+  // assert.equals(actual[1], '', 'correct answer');
+  assert.end();
+});
 `);
       break;
     case 'run':
