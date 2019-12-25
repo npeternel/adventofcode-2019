@@ -13,7 +13,7 @@ function day5part1(stringInts, input) {
     let opcode = ints[i % ints.length];
     if (opcode.length !== 4) {
       opcode = '0'.repeat(4 - opcode.length).concat(opcode);
-    };
+    }
     const instruction = parseInt(opcode.slice(-2), 10);
     const a = opcode.charAt(1) === '0' ? ints[parseInt(ints[i % ints.length + 1], 10)] : ints[i % ints.length + 1];
     const b = opcode.charAt(0) === '0' ? ints[parseInt(ints[i % ints.length + 2], 10)] : ints[i % ints.length + 2];
@@ -52,7 +52,7 @@ function day5part2(stringInts, input) {
     let opcode = ints[i % ints.length];
     if (opcode.length !== 4) {
       opcode = '0'.repeat(4 - opcode.length).concat(opcode);
-    };
+    }
     const instruction = parseInt(opcode.slice(-2), 10);
     const a = parseInt(opcode.charAt(1) === '0' ? ints[parseInt(ints[i % ints.length + 1], 10)] : ints[i % ints.length + 1], 10);
     const b = parseInt(opcode.charAt(0) === '0' ? ints[parseInt(ints[i % ints.length + 2], 10)] : ints[i % ints.length + 2], 10);
@@ -100,5 +100,5 @@ function day5part2(stringInts, input) {
   }
   return ints[0];
 }
-      
+
 module.exports.solution = solution;
