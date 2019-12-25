@@ -25,8 +25,8 @@ if (require.main === module) {
       fs.writeFileSync(__dirname + '/' + day + '/solution.js', `'use strict';
 
 function solution(input) {
-  const part1Answer = function ${day}part1(input);
-  const part2Answer = function ${day}part2(input);
+  const part1Answer = ${day}part1(input);
+  const part2Answer = ${day}part2(input);
   console.log(\`Answer is \${part1Answer}\ and \${part2Answer}\`);
 }
 
