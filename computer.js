@@ -8,12 +8,13 @@ class Computer {
     this.i = 0;
     this.initialInput = input;
     this.invalid = false;
+    this.relativeBase = 0;
   }
 
   execute(input, pause) {
     let run = true;
     let output;
-    while (run) {
+    while (!this.halted) {
       let opcode = this.ints[this.i % this.ints.length];
       if (opcode.length !== 4) {
         opcode = '0'.repeat(4 - opcode.length).concat(opcode);
@@ -23,10 +24,9 @@ class Computer {
       const b = parseInt(opcode.charAt(0) === '0' ? this.ints[parseInt(this.ints[this.i % this.ints.length + 2], 10)] : this.ints[this.i % this.ints.length + 2], 10);
       switch (instruction) {
         case 99:
-          run = false;
           this.halted = true;
           if (output === undefined) this.invalid = true;
-          break;
+          return parseInt(output, 10);
         case 1:
           this.ints[this.ints[this.i % this.ints.length + 3]] = a + b;
           this.i += 4;
@@ -69,14 +69,15 @@ class Computer {
           else this.ints[parseInt(this.ints[this.i % this.ints.length + 3], 10)] = 0;
           this.i += 4;
           break;
+        case 9:
+          this.relativeBase += a;
+          this.i += 2;
         default:
           this.invalid = true;
           this.halted = true;
-          run = false;
-          break;
+          return undefined;
       }
     }
-    return parseInt(output, 10);
   }
 }
 
