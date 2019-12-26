@@ -9,7 +9,8 @@ const solutions = {
   day3: require('./day3/solution'),
   day4: require('./day4/solution'),
   day5: require('./day5/solution'),
-  day6: require('./day6/solution')
+  day6: require('./day6/solution'),
+  day7: require('./day7/solution')
 }
 
 if (require.main === module) {
@@ -45,13 +46,21 @@ module.exports.solution = solution;
 const test = require('tape');
 const { solution } = require('./solution');
 
+<<<<<<< HEAD
+test('day ${day} part 1', (assert) => {
+=======
 test('${day} part 1', (assert) => {
+>>>>>>> master
   // const actual = solution('');
   // assert.equals(actual[0], '', 'correct answer');
   assert.end();
 });
 
+<<<<<<< HEAD
+test('day ${day} part 2', (assert) => {
+=======
 test('${day} part 2', (assert) => {
+>>>>>>> master
   // let actual = solution('');
   // assert.equals(actual[1], '', 'correct answer');
   assert.end();
