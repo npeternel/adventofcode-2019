@@ -9,7 +9,8 @@ const solutions = {
   day3: require('./day3/solution'),
   day4: require('./day4/solution'),
   day5: require('./day5/solution'),
-  day6: require('./day6/solution')
+  day6: require('./day6/solution'),
+  day7: require('./day7/solution')
 }
 
 if (require.main === module) {
