@@ -3,17 +3,6 @@
 const fs = require('fs');
 const exec = require('child_process').exec;
 
-const solutions = {
-  day1: require('./day1/solution'),
-  day2: require('./day2/solution'),
-  day3: require('./day3/solution'),
-  day4: require('./day4/solution'),
-  day5: require('./day5/solution'),
-  day6: require('./day6/solution'),
-  day7: require('./day7/solution'),
-  day8: require('./day8/solution')
-}
-
 if (require.main === module) {
   const day = process.argv[3];
   if (!/day\d+/.test(day)) { throw Error(`invalid day '${day}'`); }
@@ -40,7 +29,7 @@ function ${day}part1(input) {
 function ${day}part2(input) {
   return;
 }
-      
+
 module.exports.solution = solution;
 `);
       fs.writeFileSync(__dirname + '/' + day + '/solution.test.js', `'use strict';
@@ -63,7 +52,8 @@ test('${day} part 2', (assert) => {
       break;
     case 'run':
       const input = fs.readFileSync(__dirname + '/' + day + '/input', 'utf8');
-      solutions[day].solution(input);
+      const dayModule = require('./'+day+'/solution');
+      dayModule.solution(input);
       break;
     default:
   }
