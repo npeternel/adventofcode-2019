@@ -29,6 +29,7 @@ function solution(input) {
   const part1Answer = ${day}part1(input);
   const part2Answer = ${day}part2(input);
   console.log(\`Answer is \${part1Answer}\ and \${part2Answer}\`);
+  return [part1Answer, part2Answer];
 }
 
 function ${day}part1(input) {
@@ -46,21 +47,13 @@ module.exports.solution = solution;
 const test = require('tape');
 const { solution } = require('./solution');
 
-<<<<<<< HEAD
-test('day ${day} part 1', (assert) => {
-=======
 test('${day} part 1', (assert) => {
->>>>>>> master
-  // const actual = solution('');
+  // let actual = solution('');
   // assert.equals(actual[0], '', 'correct answer');
   assert.end();
 });
 
-<<<<<<< HEAD
-test('day ${day} part 2', (assert) => {
-=======
 test('${day} part 2', (assert) => {
->>>>>>> master
   // let actual = solution('');
   // assert.equals(actual[1], '', 'correct answer');
   assert.end();
