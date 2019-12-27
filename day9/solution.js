@@ -10,11 +10,17 @@ function solution(input) {
 }
 
 function day9part1(input) {
-  return;
+  const computer = new Computer(input, 1);
+  const output = computer.execute();
+  if (computer.invalid) throw Error('invalid program');
+  return output;
 }
 
 function day9part2(input) {
-  return;
+  const computer = new Computer(input, 2);
+  const output = computer.execute();
+  if (computer.invalid) throw Error('invalid program');
+  return output;
 }
 
 module.exports.solution = solution;
