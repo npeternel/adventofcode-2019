@@ -12,9 +12,3 @@ test('day9 part 1', (assert) => {
   assert.equals(actual[0],1125899906842624, 'correct answer');
   assert.end();
 });
-
-test('day9 part 2', (assert) => {
-  // let actual = solution('');
-  // assert.equals(actual[1], '', 'correct answer');
-  assert.end();
-});

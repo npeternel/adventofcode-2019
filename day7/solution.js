@@ -16,7 +16,7 @@ function day7part1(input) {
     let inOut = 0;
     for (let i = 0; i < combo.length; i++) {
       const computer = new Computer(input, combo[i]);
-      inOut = computer.execute(inOut, false);
+      inOut = computer.execute({ input: inOut, pause: false });
       maxOutput = Math.max(maxOutput, inOut);
     }
   });
@@ -31,7 +31,7 @@ function day7part2(input) {
     let inOut = 0;
     while (computers.length !== 0) {
       const currComp = computers.shift();
-      inOut = currComp.execute(inOut, true);
+      inOut = currComp.execute({ input: inOut, pause: true });
       if (!currComp.halted) {
         computers.push(currComp);
         if (!currComp.invalid) maxOutput = Math.max(inOut, maxOutput);

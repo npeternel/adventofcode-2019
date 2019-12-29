@@ -24,7 +24,7 @@ test('day10 part 1', (assert) => {
   assert.end();
 });
 
-test.only('day10 part 2', (assert) => {
+test('day10 part 2', (assert) => {
   let input = `.#....#####...#..
 ##...##.#####..##
 ##...#...#.#####.
