@@ -54,7 +54,7 @@ class Computer {
           output = parseInt(a, 10);
           this.i += 2;
           if (pause) return output;
-          else console.log(`output: ${a}`);
+          else if (options && options.print) console.log(`output: ${a}`);
           break;
         case 5:
           if (a !== 0) this.i = b;

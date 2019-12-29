@@ -3,7 +3,7 @@
 const test = require('tape');
 const { solution } = require('./solution');
 
-test.only('day9 part 1', (assert) => {
+test('day9 part 1', (assert) => {
   let actual = solution('109,1,204,-1,1001,100,1,100,1008,100,16,101,1006,101,0,99');
   assert.equals(actual[0], 99, 'correct answer');
   actual = solution('1102,34915192,34915192,7,4,7,99,0');
