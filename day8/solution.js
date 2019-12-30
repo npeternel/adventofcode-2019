@@ -58,7 +58,6 @@ function day8part2(input) {
     }
     console.log(msg);
   }
-  // console.log('■'
   return;
 }
 
